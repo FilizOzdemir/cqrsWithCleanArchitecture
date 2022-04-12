@@ -55,4 +55,3 @@ gerekmektedir. Olası failover senaryolarını düşünmediğinizde veri kaybı 
 Kaynaklar:
 1-https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
 
-
