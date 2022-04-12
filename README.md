@@ -19,23 +19,34 @@ implementasyonlarını yaparız. Api'ler olarak düşünebiliriz. Projemizin hi�
 olabilir. Bu katman en üst katmanlardan biridir bu yüzden hiç bir katman bu katmana bağımlı değildir.
 
 CQRS Ne Zaman Kullanılmalı ?
+
 -Birbirinden ayrı sistemlerde olası bir servisin hata vermesi durumunda bu hatanın sistemin akışına olumsuz yönde etkisi olmuyorsa kullanılabilir.
+
 -Kompleks iş kurallarının olabileceği veya iş kurallarının sık sık değiştiği yapılarda kullanılabilir.
 -Yüksek veri trafiğinin olduğu sistemlerde kullanılabilir.
 
+
 CQRS’i Ne Zaman Kullanmamalıyız ?
+
 -İş kurallarının basit ve çok değişmediği sistemlerde,
+
 -Basit CRUD işlemlerinin yapıldığı sistemlerde
 CQRS kullanılması önerilmez.
 
 CQRS’in Avantajları
+
 -Read ve write operasyonlarının ayrılması performansı, ölçeklenebilirliği ve güvenliği artırmaya yardımcı olabilir.
+
 -Read ve write işlemleriniz için farklı veritabanları kullanabilirsiniz.(Örneğin, yazma işlemleri için MySQL kullanırken okuma işlemleri için Couchbase kullanabilirsiniz).
+
 -Read ve write işlemleri ayrıldığı için, herhangi yapılacak bir read işleminde write işlemini beklemek zorunda kalmayız.
+
 -Her ekibin farklı Domain Logic’i üzerinde çalışabileceği bir yapı kurulmasına yardımcı olabilir.
 
 CQRS’in Dezavantajları
+
 -Kod karmaşıklığını arttırır.
+
 -Event bazlı bir yapıya sahipseniz, uygulamanızın queue’da yer alan hataları ve tekrarlanan işlemleri yönetebilmesi 
 gerekmektedir. Olası failover senaryolarını düşünmediğinizde veri kaybı veya daha büyük sorunlarla karşılaşabilirsiniz.
 
