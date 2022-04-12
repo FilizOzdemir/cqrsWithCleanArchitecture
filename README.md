@@ -23,6 +23,7 @@ CQRS Ne Zaman Kullanılmalı ?
 -Birbirinden ayrı sistemlerde olası bir servisin hata vermesi durumunda bu hatanın sistemin akışına olumsuz yönde etkisi olmuyorsa kullanılabilir.
 
 -Kompleks iş kurallarının olabileceği veya iş kurallarının sık sık değiştiği yapılarda kullanılabilir.
+
 -Yüksek veri trafiğinin olduğu sistemlerde kullanılabilir.
 
 
@@ -30,8 +31,7 @@ CQRS’i Ne Zaman Kullanmamalıyız ?
 
 -İş kurallarının basit ve çok değişmediği sistemlerde,
 
--Basit CRUD işlemlerinin yapıldığı sistemlerde
-CQRS kullanılması önerilmez.
+-Basit CRUD (Create, Read, Update, Delete)  işlemlerinin yapıldığı sistemlerde CQRS kullanılması önerilmez.
 
 CQRS’in Avantajları
 
@@ -55,6 +55,4 @@ gerekmektedir. Olası failover senaryolarını düşünmediğinizde veri kaybı 
 Kaynaklar:
 1-https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
 
-2-https://medium.com/kodcular/clean-architecture-nedir-d5da08bd2f68
 
-3-https://serkanerip.medium.com/clean-architecture-temiz-mimari-nedir-22961b7d389b#:~:text=Clean%20architecture%2C%20uygulamam%C4%B1z%C4%B1n%20ba%C4%9F%C4%B1ml%C4%B1klar%C4%B1n%C4%B1n%20tek,%2C%20Infrastructure%20ve%20Presentation'd%C4%B1r.
