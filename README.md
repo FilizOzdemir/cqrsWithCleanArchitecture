@@ -1,6 +1,7 @@
 # cqrsWithCleanArchitecture
 Clean Architecture (Temiz Mimari)- CQRS (Command Query Responsibility Segregation - Komut ve Sorgu Sorumluluklarının Ayrışması) Nedir?
 
+Clean Architecture Nedir?
 Clean architecture, uygulamamızın bağımlıklarının tek yönlü ve içe doğru olmasını savunan bir yazılım mimarisidir.(Tasarım Desenidir!)
 Bu mimaride yazılım belirli katmanlara ayrılmıştır bunlar Domain, Application, Infrastructure ve Presentation‘dır.
 
@@ -19,6 +20,20 @@ implementasyonlarını yaparız. Api'ler olarak düşünebiliriz. Projemizin hi�
 
 4.Presentation: Bu katman kullanıcının uygulama ile iletişime geçtiği katmandır. Bu katman da konsol, api ve ya mvc projesi 
 olabilir. Bu katman en üst katmanlardan biridir bu yüzden hiç bir katman bu katmana bağımlı değildir.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CQRS NEDİR?
+
+CQRS, ana odağı write (yazma) ve read (okuma) sorumluluklarının ayrıştırılmasına dayanan bir mimari tasarım modelidir.
+Bu yaklaşımda metotlar 2 farklı modele ayrılmalıdır:
+
+Commands: Objenin veya sistemin durumunu değiştirir/Olmayan veriyi oluşturan ya da var olan bir veri üzerinde güncelleme veya silme işlemi yapan isteklerdir.
+Yani veri tabanında değişiklik yapacak metotlarımızı bu kısım (command) içine yazarız. (INSERT UPDATE DELETE) !!!
+
+
+Queries: Sadece sonucu geriye döner herhangi bir objenin veya sistemin durumunu değiştirmez/Mevcut verileri sadece listelemek, okumak yahut sunmak için read işlemi yapan isteklerdir.
+Yani veri tabanında değişiklik yapmayan metotları bu kısım(Queries) içine yazarız. Get metotları olarak söyleyebiliriz!!!
+*SELECT
 
 CQRS Ne Zaman Kullanılmalı ?
 
