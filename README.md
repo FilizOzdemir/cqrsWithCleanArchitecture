@@ -1,4 +1,6 @@
 # cqrsWithCleanArchitecture
+Clean Architecture (Temiz Mimari)- CQRS (Command Query Responsibility Segregation - Komut ve Sorgu Sorumluluklarının Ayrışması) Nedir?
+
 Clean architecture, uygulamamızın bağımlıklarının tek yönlü ve içe doğru olmasını savunan bir yazılım mimarisidir.(Tasarım Desenidir!)
 Bu mimaride yazılım belirli katmanlara ayrılmıştır bunlar Domain, Application, Infrastructure ve Presentation‘dır.
 
