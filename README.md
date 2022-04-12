@@ -41,9 +41,7 @@ gerekmektedir. Olası failover senaryolarını düşünmediğinizde veri kaybı 
 
 
 
-
-
 Kaynaklar:
 1-https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
-2-https://sefikcankanber.medium.com/cqrs-command-query-responsibility-segregation-nedir-16b196376389
-3-https://serkanerip.medium.com/clean-architecture-temiz-mimari-nedir-22961b7d389b#:~:text=Clean%20architecture%2C%20uygulamam%C4%B1z%C4%B1n%20ba%C4%9F%C4%B1ml%C4%B1klar%C4%B1n%C4%B1n%20tek,%2C%20Infrastructure%20ve%20Presentation'd%C4%B1r.
+
+
