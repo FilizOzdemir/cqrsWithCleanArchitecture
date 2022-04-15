@@ -15,6 +15,9 @@ import com.etiya.cqrsWithCleanArchitecture.ws.models.CreateAccountTypeModel;
 @RequestMapping("/api/accounttypes")
 public class AccountTypeController {
 
+	//CommandGateway:Axonun komut işleme birleşenlerine yönelik arayüzüdür.
+	//Command gateway ile gönderilen komutların sonuçları beklenebilir.
+
 	private CommandGateway commandGateway;
 
 	public AccountTypeController(CommandGateway commandGateway) {
@@ -29,6 +32,7 @@ public class AccountTypeController {
 				.description(createAccountTypeModel.getDescription()).build();
 		command.setAccountTypeId(UUID.randomUUID().toString());
 		this.commandGateway.sendAndWait(command);
+
 
 	}
 }

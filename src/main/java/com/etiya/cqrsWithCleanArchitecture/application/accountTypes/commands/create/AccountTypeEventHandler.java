@@ -17,8 +17,9 @@ public class AccountTypeEventHandler {
 	public AccountTypeEventHandler(AccountTypeRepository accountTypeRepository) {
 		this.accountTypeRepository = accountTypeRepository;
 	}
-	
-	@EventHandler
+
+
+	@EventHandler //Yaratılmış event geldikten sonra gelen eventleri dinlemek için kullanılır
 	public void on(AccountTypeCreatedEvent accountTypeCreatedEvent) {
 		//iş kuralları
 		AccountType accountType = new AccountType();

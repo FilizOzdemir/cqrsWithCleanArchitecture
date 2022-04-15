@@ -3,7 +3,7 @@ package com.etiya.cqrsWithCleanArchitecture.application.course.commands.create;
 import lombok.Data;
 
 @Data
-public class CourseCreatedEvent {
+public class CourseCreatedEvent { //kurs oluşturma
 
     private String courseId;
     private String courseName;

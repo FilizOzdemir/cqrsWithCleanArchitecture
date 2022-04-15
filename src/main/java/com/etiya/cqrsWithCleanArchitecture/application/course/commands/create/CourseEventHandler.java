@@ -22,7 +22,7 @@ public class CourseEventHandler {
         BeanUtils.copyProperties(courseCreatedEvent,course);
 
         if(this.courseRepository.existsCourseByCourseName(courseCreatedEvent.getCourseName())){
-            throw new RuntimeException("KURS MEVCUT !");
+            throw new RuntimeException(" BU KURS MEVCUT !");
         }
         this.courseRepository.save(course);
     }

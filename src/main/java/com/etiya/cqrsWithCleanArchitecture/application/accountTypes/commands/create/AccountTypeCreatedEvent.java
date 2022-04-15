@@ -3,7 +3,7 @@ package com.etiya.cqrsWithCleanArchitecture.application.accountTypes.commands.cr
 import lombok.Data;
 
 @Data
-public class AccountTypeCreatedEvent {
+public class AccountTypeCreatedEvent { //Hesap Türü Oluşturma
 	
 	private String accountTypeId;
 	private String accountName;

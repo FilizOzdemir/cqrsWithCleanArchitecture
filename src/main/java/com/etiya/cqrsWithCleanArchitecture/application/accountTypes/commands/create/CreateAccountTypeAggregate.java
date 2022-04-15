@@ -17,15 +17,17 @@ public class CreateAccountTypeAggregate {
 	private String description;
 	private double price;
 
-	@CommandHandler
+	@CommandHandler //Gönderilen komutun işleyicisini belirtmek için kullanılan axon anotasyonu
 	public CreateAccountTypeAggregate(CreateAccountTypeCommand command) {
 		AccountTypeCreatedEvent accountTypeCreatedEvent=new AccountTypeCreatedEvent();
 		BeanUtils.copyProperties(command, accountTypeCreatedEvent);
 		AggregateLifecycle.apply(accountTypeCreatedEvent);
-		
+
+		//AggreagateLifeCycle:Bir aggreagete üzerinden olay(event)yayınlamak için kullanılır yani
+    	// Bir command execyte edilerken uygulamanın gerikalanına yeni bir event oluşturulduğunu bildirir.
 	}
 	
-	@EventSourcingHandler
+	@EventSourcingHandler //Gönderilen eventin işleyicisini belirtmek için kullanılan axon anotasyonu
 	public void on(AccountTypeCreatedEvent accountTypeCreatedEvent) {
 	 
 		this.accountTypeId=accountTypeCreatedEvent.getAccountTypeId();
@@ -34,3 +36,5 @@ public class CreateAccountTypeAggregate {
 		this.price=accountTypeCreatedEvent.getPrice();
 	}
 }
+
+
